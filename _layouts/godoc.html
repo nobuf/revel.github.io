@@ -89,27 +89,21 @@ nav:
     title: watcher
     url: watcher.html
 ---
+{% capture lnk %}https://godoc.org/github.com/revel/revel#{{ page.title }}{% endcapture %}
 <!DOCTYPE html>
 <html>
 <head>
-    {% include head.html %}
-    <link type="text/css" rel="stylesheet" href="{{ page.root }}/css/godoc.css">
-    <script type="text/javascript" src="{{ page.root }}/js/godoc.js"></script>
+<slink rel="canonical" href="{{ lnk }}"/>
+    <smeta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <smeta shttp-equiv="refresh" content="10;url={{ lnk }}" />
+
 </head>
 <body>
 
-{% include topnav.html %}
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-3">
-            {% include leftnav.html %}
-        </div>
-        <div id="page" class="col-md-9">
-            {{content}}
-        </div>
-    </div>
-</div>
+        <h1>Redirecting... {{ lnk }}</h1>
+        <a href="{{ lnk }}">Click here if you are not redirected.<a>
+        <script>lsocation='{{ lnk }}'</script>
 
 </body>
 </html>
